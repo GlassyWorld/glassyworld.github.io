@@ -5,10 +5,8 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ## Quick Start
 
-测试自动推送 
-Test auto deploy
 
-### Create a new post
+### Create a new post and test deploy 测试自动推送
 
 ``` bash
 $ hexo new "My New Post"
