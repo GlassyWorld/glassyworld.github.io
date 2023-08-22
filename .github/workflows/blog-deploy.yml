@@ -25,7 +25,6 @@ jobs:
       #   run: |
       #     echo "Node version is `node -v`"
       #     echo "Yarn version is `yarn -v`"
-
       - name: Build & Deploy
         run: |
           git config --global user.name "GitHub Action"
