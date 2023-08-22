@@ -16,32 +16,15 @@ jobs:
         with:
           node-version: "14"
 
-      # - name: Setup yarn & Install node_modules
-      #   uses: borales/actions-yarn@v3.0.0
-      #   with:
-      #     cmd: install
+      - name: Setup yarn & Install node_modules
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install --ignore-scripts
 
-      # - name: Check yarn & node version
-      #   run: |
-      #     echo "Node version is `node -v`"
-      #     echo "Yarn version is `yarn -v`"
-
-      - name: Install Hexo
+      - name: Check yarn & node version
         run: |
-        npm install hexo-cli -g
-      
-      - name: Install Hexo Plugins
-        run: |
-        npm install hexo-deployer-git --save
-        npm install hexo-deployer-heroku --save
-        npm install hexo-generator-archive --save
-        npm install hexo-generator-category --save
-        npm install hexo-generator-index --save
-        npm install hexo-generator-tag --save
-        npm install hexo-render-ejs --save
-        npm install hexo-render-marked --save
-        npm install hexo-render-stylus --save
-        npm install hexo-server --save
+          echo "Node version is `node -v`"
+          echo "Yarn version is `yarn -v`"
 
       - name: Build & Deploy
         run: |
@@ -49,6 +32,6 @@ jobs:
           git config --global user.email "action@github.com"
           sed -i'' "s~git@github.com:~https://${{ secrets.GH_TOKEN }}@github.com/~" _config.yml
           rm -rf .deploy_git
-      #     yarn clean
-      #     yarn build
-          hexo deploy
+          yarn clean
+          yarn build
+          yarn deploy
