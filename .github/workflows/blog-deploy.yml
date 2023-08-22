@@ -11,10 +11,10 @@ jobs:
         with:
           ref: "master"
 
-      # - name: Setup node
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: "14"
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "14"
 
       # - name: Setup yarn & Install node_modules
       #   uses: borales/actions-yarn@v3.0.0
@@ -34,4 +34,7 @@ jobs:
       #     rm -rf .deploy_git
       #     yarn clean
       #     yarn build
-          yarn deploy
+      #     yarn deploy
+          npm install --location=global hexo-cli
+          npm install
+          hexo d
