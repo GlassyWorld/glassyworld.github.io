@@ -6,4 +6,4 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
-package.json
+.github/workflows/blog-deploy.yml
