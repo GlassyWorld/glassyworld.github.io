@@ -16,15 +16,6 @@ jobs:
         with:
           node-version: "14"
 
-      # - name: Setup yarn & Install node_modules
-      #   uses: borales/actions-yarn@v3.0.0
-      #   with:
-      #     cmd: install
-
-      # - name: Check yarn & node version
-      #   run: |
-      #     echo "Node version is `node -v`"
-      #     echo "Yarn version is `yarn -v`"
       - name: Build & Deploy
         run: |
           git config --global user.name "GitHub Action"
