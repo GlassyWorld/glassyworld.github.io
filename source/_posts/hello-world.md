@@ -5,7 +5,8 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ## Quick Start
 
-测试自动推送
+测试自动推送 
+Test auto deploy
 
 ### Create a new post
 
