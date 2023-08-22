@@ -36,7 +36,7 @@ skip_render:
 # multiple: multiple category hierarchies
 auto_category:
  enable: true
- multiple: false
+ multiple: true
  depth: 
 
 # Writing
